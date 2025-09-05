@@ -108,14 +108,16 @@ class UserResource extends Resource
                 Tables\Actions\ViewAction::make()
                     ->label(''),
                 Tables\Actions\EditAction::make()
+                    ->visible(fn(User $record) => !$record->hasRole('Super_Admin') || auth()->user()->hasRole('Super_Admin'))
                     ->label(''),
                 Tables\Actions\DeleteAction::make()
+                    ->visible(fn(User $record) => !$record->hasRole('Super_Admin') || auth()->user()->hasRole('Super_Admin'))
                     ->label(''),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                    Tables\Actions\ForceDeleteBulkAction::make(),
+                    Tables\Actions\DeleteBulkAction::make()
+                        ->visible(fn(User $record) => !$record->hasRole('Super_Admin') || auth()->user()->hasRole('Super_Admin')),
                     Tables\Actions\RestoreBulkAction::make(),
                 ]),
             ]);
