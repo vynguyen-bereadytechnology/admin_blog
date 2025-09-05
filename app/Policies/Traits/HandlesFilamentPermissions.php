@@ -8,12 +8,6 @@ trait HandlesFilamentPermissions
     protected function can(User $user, string $action): bool
     {
         $permission = "{$this->entity}.{$action}";
-        $allPermission = "{$this->entity}.all";
-
-        // nếu có .all thì auto pass
-        if ($user->can($allPermission)) {
-            return true;
-        }
 
         return $user->can($permission);
     }
