@@ -221,7 +221,6 @@ return [
      */
     'actions' => [
         // 'view_any',
-        'all',
         'view',
         'create',
         'update',
