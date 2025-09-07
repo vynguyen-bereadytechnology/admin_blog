@@ -1,0 +1,13 @@
+@import "./colors.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@layer components {
+  .prose-custom,
+  .prose-custom * {
+    color: var(--color-text) !important;
+  }
+}

@@ -1,0 +1,70 @@
+/* ========================
+   Theme variables
+======================== */
+
+/* Light mode */
+:root {
+    --color-bg: #fdfcf9;              /* nền be sáng nhẹ */
+    --color-card: #ffffff;            /* card trắng trong trẻo */
+    --color-text: #1f1f1f;            /* chữ đen đậm */
+    --color-primary: #1f7a7a;         /* xanh ngọc đậm sang trọng */
+    --color-primary-hover: #155d5d;   /* xanh ngọc rêu khi hover */
+    --color-secondary: #e38b4e;       /* cam đất ấm áp, gợi hoàng hôn */
+    --color-text-secondary: #636363;  /* chữ phụ xám trung tính */
+    --color-border: #e6e1da;          /* viền be cát */
+}
+
+/* Dark mode */
+.dark {
+    --color-bg: #181a1a;              /* nền tối sâu */
+    --color-card: #222525;            /* card tối vừa */
+    --color-text: #f5f5f5;            /* chữ sáng */
+    --color-primary: #2ea8a8;         /* xanh ngọc sáng hơn để nổi bật */
+    --color-primary-hover: #1f7a7a;   /* xanh ngọc đậm khi hover */
+    --color-secondary: #f0a865;       /* cam đất sáng, nổi bật trong tối */
+    --color-text-secondary: #aaaaaa;  /* chữ phụ sáng hơn */
+    --color-border: #2a2d2d;          /* viền tối */
+}
+
+
+/* ========================
+   Utility classes
+======================== */
+
+.bg-bg {
+    background-color: var(--color-bg);
+}
+.bg-card {
+    background-color: var(--color-card);
+}
+.text-text {
+    color: var(--color-text);
+}
+.text-primary {
+    color: var(--color-primary);
+}
+.text-primary-hover:hover {
+    color: var(--color-primary-hover);
+}
+.text-secondary {
+    color: var(--color-secondary);
+}
+.text-text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.border-theme {
+    border-color: var(--color-border);
+}
+.bg-primary {
+    background-color: var(--color-primary);
+    color: var(--color-card);
+}
+.bg-primary-hover:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.bg-card-primary {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+}
