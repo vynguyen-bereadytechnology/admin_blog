@@ -14,7 +14,7 @@ trait HandlesFilamentPermissions
 
     protected function checkSuperAdmin(User $user, $model): bool
     {
-        // Nếu model là Super_Admin nhưng user không phải Super_Admin => không cho phép
+        // Nếu model là Super_Admin nhưng user không phải Super_Admin
         if ($model->hasRole('Super_Admin') && !$user->hasRole('Super_Admin')) {
             return false;
         }
